@@ -17,3 +17,8 @@ end
 Then /^I should see "([^"]*)"$/ do |arg1|
   page.should have_content arg1 # express the regexp above with the code you wish you had
 end
+
+Then /^I should be on the user page for "([^"]*)"$/ do |arg1|
+  user_path(User.find_by_name(arg1)) # express the regexp above with the code you wish you had
+end
+
