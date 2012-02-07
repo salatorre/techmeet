@@ -1,0 +1,9 @@
+<header>
+	<nav>
+		<% if @user.nil? %> 
+		<%= link_to "Sign Up", new_user_path %>
+		<% else %>
+		<%= link_to "Sign out", '#' %>
+		<% end %>
+	</nav>
+</header>

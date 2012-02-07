@@ -152,6 +152,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   coffee-rails (~> 3.2.1)
+  cucumber
   cucumber-rails
   database_cleaner
   jquery-rails
