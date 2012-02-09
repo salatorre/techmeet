@@ -1,0 +1,6 @@
+<h1>Members</h1>
+<ul>
+<%= @users.each do |account| %>
+  <li><%= link_to account.name, account %></li>
+<% end %>
+</ul>

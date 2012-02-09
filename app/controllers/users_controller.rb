@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def index
+    @title = "Member list"
+    @users = User.all
+  end
   def new
     @title = "New Member"
     @user = User.new
@@ -16,5 +20,19 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @title = @user.name
+  end
+  def edit
+    @user = User.find(params[:id])
+    @title = "Edit account"
+  end
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(params[:user])
+      flash[:notice]="Account has been updated"
+      redirect_to @account
+    else
+      flash[:alert]="Account has not been updated"
+      render 'edit'
+    end
   end
 end
