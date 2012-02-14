@@ -8,11 +8,8 @@
 </head>
 <body>
 <%= render 'layouts/header' %>
-<%= flash.each do |key, value| %>
-<div class='flash' id='<% key %>'>
-<%= value %>
-</div>
-<% end %>
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
 <%= yield %>
 <%= render 'layouts/footer' %>
 </body>
